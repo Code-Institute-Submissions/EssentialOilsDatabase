@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>I'm extending the base template!</h2>
+
+    {% for oil in essentialoils %}
+        {{ oil.oil_name }}<br>
+        {{ oil.category_name }}<br>
+        {{ oil.oil_description }}<br>
+        {{ oil.source_inc }}<br>
+    {% endfor %}
+
+{% endblock %}    
