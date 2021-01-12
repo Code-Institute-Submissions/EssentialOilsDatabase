@@ -10,18 +10,22 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+
+app.config ["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config ["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
+
 
 mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_essential_oils")
-def get_essential_oils():
-    essential_oils = mongo.db.essential_oils.find()
-    return render_template(essential_oils.html, essential_oils=essential_oils)
+@app.route("/get_essentialoils")
+def get_essentialoils():
+    essentialoils = mongo.db.essential_oils.find()
+    return render_template(
+        "essentialoils.html", essentialoils = essentialoils)
+#check to make sure variation between essential_oils database and other essentialoils without _ are ok
 
 
 if __name__ == "__main__":

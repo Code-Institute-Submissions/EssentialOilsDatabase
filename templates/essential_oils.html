@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essential Oils</title>
+    <title>Task Manager</title>
 </head>
 <body>
-    (% for oil in essential_oils%)
-        {{oil.oil_name}} <br>
-        {{oil.category_name}} <br>
-        {{oil.oil_description} <br>
-        {{oil.source_inc}} <br>
-    (%endfor%)
+    {% for oil in essentialoils %}
+        {{ oil.oil_name }}<br>
+        {{ oil.category_name }}<br>
+        {{ oil.oil_description }}<br>
+        {{ oil.source_inc }}<br>
+    {% endfor %}
 </body>
 </html>
