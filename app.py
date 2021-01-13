@@ -27,6 +27,9 @@ def get_essentialoils():
         "essentialoils.html", essentialoils = essentialoils)
 #check to make sure variation between essential_oils database and other essentialoils without _ are ok
 
+@app.route("/add_oils")
+def add_oils():
+        return render_template("add_oils.html")
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
