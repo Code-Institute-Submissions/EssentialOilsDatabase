@@ -29,7 +29,8 @@ def get_essentialoils():
 
 @app.route("/add_oils")
 def add_oils():
-        return render_template("add_oils.html")
+        categories = mongo.db.categories.find().sort("category_name", 1)
+        return render_template("add_oils.html", categories=categories)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
