@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_essentialoils")
 def get_essentialoils():
-    essentialoils = mongo.db.essential_oils.find()
+    essentialoils = list(mongo.db.essential_oils.find())
     return render_template(
         "essentialoils.html", essentialoils = essentialoils)
 #check to make sure variation between essential_oils database and other essentialoils without _ are ok

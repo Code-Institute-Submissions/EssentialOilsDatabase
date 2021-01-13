@@ -1,28 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-
-    {% for oil in essentialoils %}
-        {{ oil.oil_name }}<br>
-        {{ oil.category_name }}<br>
-        {{ oil.oil_description }}<br>
-        {{ oil.source_inc }}<br>
-    {% endfor %}
-
     <ul class="collapsible">
+        {% for oil in essentialoils %}
         <li>
-            <div class="collapsible-header white-text teal darken-2 text-shadow"><i class="fas fa-caret-down"></i>First</div>                <!--fix colours and  that of accordian in the class of the div-->
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header white-text teal darken-2 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ oil.oil_name }}</strong>                                         <!--Do I want date added here? or  single or combo (toggle switch)-->
+                {% if oil.source_inc == "on" %}
+                    <i class = "fas fa-check purple text-lighten-2 tooltipped"
+                    data-position="right" data-tooltip="Source Included!"></i></i>                <!-- change icon-->
+                {% endif %}
+            </div>                <!--fix colours and  that of accordian in the class of the div-->
+            <div class="collapsible-body">
+                <strong>{{ oil.category_name }}</strong>
+                <p>{{ oil.oil_description }}</p>
+            </div>
         </li>
-        <li>
-            <div class="collapsible-header white-text teal darken-2 text-shadow"><i class="fas fa-caret-down"></i>Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header white-text teal darken-2 text-shadow"><i class="fas fa-caret-down"></i>Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
   </ul>
 
 {% endblock %}    
