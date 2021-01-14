@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <h3 class="light-blue-text text-darken-4 center-align">All Essential Oils</h3>
+
     <ul class="collapsible">
         {% for oil in essentialoils %}
         <li>
@@ -9,7 +11,7 @@
                 <strong>{{ oil.oil_name }}</strong>                                         <!--Do I want date added here? or  single or combo (toggle switch)-->
                 {% if oil.source_inc == "on" %}
                     <i class = "fas fa-check purple text-lighten-2 tooltipped"
-                    data-position="right" data-tooltip="Source Included!"></i></i>                <!-- change icon-->
+                    data-position="right" data-tooltip="Source Included!"></i>                <!-- change icon-->
                 {% endif %}
             </div>                <!--fix colours and  that of accordian in the class of the div-->
             <div class="collapsible-body">
