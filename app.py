@@ -46,6 +46,12 @@ def add_oils():
     return render_template("add_oils.html", categories=categories)
 
 
+@app.route("/edit_oil/<oil_id>", methods=["GET", "POST"])
+def edit_oil(oil_id):
+    oil = mongo.db.oil.find_one({"_id": ObjectId(oil_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_oil.html", oil=oil, categories=categories)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
