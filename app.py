@@ -37,7 +37,6 @@ def add_oil():
             "oil_description": request.form.get("oil_description"),
             "source_inc": source_inc,
         }
-
         mongo.db.essential_oils.insert_one(oil)
         flash("Oil Sucessfully Added")
         return redirect(url_for("get_essentialoils"))
@@ -48,6 +47,17 @@ def add_oil():
 
 @app.route("/edit_oil/<oil_id>", methods=["GET", "POST"])
 def edit_oil(oil_id):
+    if request.method == "POST":
+        source_inc = "on" if request.form.get("source_inc") else "off"
+        Submit = {
+            "category_name": request.form.get("category_name"),
+            "oil_name": request.form.get("oil_name"),
+            "oil_description": request.form.get("oil_description"),
+            "source_inc": source_inc,
+        }
+        mongo.db.essential_oils.update({"_id": ObjectId(oil_id)}.submit)
+        flash("Oil Sucessfully Updated")
+
     oil = mongo.db.oil.find_one({"_id": ObjectId(oil_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_oil.html", oil=oil, categories=categories)
