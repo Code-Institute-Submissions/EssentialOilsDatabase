@@ -27,8 +27,8 @@ def get_essentialoils():
         "essentialoils.html", essentialoils=essentialoils)
 
 
-@app.route("/add_oils", methods=["GET", "POST"])
-def add_oils():
+@app.route("/add_oil", methods=["GET", "POST"])
+def add_oil():
     if request.method == "POST":
         source_inc = "on" if request.form.get("source_inc") else "off"
         oil = {
@@ -43,7 +43,7 @@ def add_oils():
         return redirect(url_for("get_essentialoils"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_oils.html", categories=categories)
+    return render_template("add_oil.html", categories=categories)
 
 
 @app.route("/edit_oil/<oil_id>", methods=["GET", "POST"])
@@ -51,6 +51,7 @@ def edit_oil(oil_id):
     oil = mongo.db.oil.find_one({"_id": ObjectId(oil_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_oil.html", oil=oil, categories=categories)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
