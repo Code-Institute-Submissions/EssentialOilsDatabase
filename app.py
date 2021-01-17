@@ -27,6 +27,15 @@ def get_essentialoils():
         "essentialoils.html", essentialoils=essentialoils)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    essentialoils = list(mongo.db.essential_oils.find(
+        {"$text": {"$search": query}}))
+    return render_template(
+        "essentialoils.html", essentialoils=essentialoils)
+
+
 @app.route("/add_oil", methods=["GET", "POST"])
 def add_oil():
     if request.method == "POST":
