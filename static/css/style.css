@@ -1,9 +1,64 @@
+/*Colors-----------------------------------------------------*/
+.bg-color {
+    background-color: #211C36;
+}
+
+h1, h2, h3, h4 {
+    color: #fff8e1;
+}
+/*
+ul:not(.browser-default) {
+    background-color: #ccaddc;
+    color: #332a52;
+}
+*/
+
+.collapsible {
+    border: 1px solid #332a52;
+}
+
+.collapsible-header {
+    background-color: #9581e8;
+    color: #332a52;
+    border: 1px solid #332a52;
+}
+
+.collapsible-body {
+    background-color: #b3efa3;
+    color: #332a52;
+    border: 1px solid #332a52;
+}
+
+.card-panel, .card {
+    background-color: #b3efa3;
+    color: #332a52;
+}
+
+.fas {
+    color: #fff8e1;
+}
+
+.nav-extended {
+    background-color: #26a69a;
+}
+
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.5)
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+/*div.card.text-shadow.center-align*/ 
+
+.text-shadow2 {
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+}
+
+.fas {
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
 
 .flashes h4 {
     line-height:2;
+    color:#26a69a;
 }
 
 .btn-small {
