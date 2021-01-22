@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix"></i> 
-                    <select id="category_name" name="category_name" class="validate" required>
+                    <select id="category_name" name="category_name" class="validate hide" required>
                         <option value="" disabled>Choose Category</option>
                         {% for category in categories %}
                             {% if category.category_name == oil.category_name %}
