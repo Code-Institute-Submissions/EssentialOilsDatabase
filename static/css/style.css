@@ -32,12 +32,9 @@ h1, h2, h3, h4 {
     color: #9581e8;
 }
 
-/*
-ul:not(.browser-default) {
-    background-color: #ccaddc;
-    color: #332a52;
+.dropdown-content {
+    background-color: #fff8e1;
 }
-*/
 
 /*----------------------------------------------------Essentialoils.html------------*/
 .collapsible {
@@ -62,6 +59,9 @@ ul:not(.browser-default) {
 
 .search-field .search-btns {
     justify-content: center;
+}
+.search-panel {
+    margin-bottom: 40px;
 }
 
 /*----------------------------------------------------Multiple pages----------------*/
@@ -93,6 +93,7 @@ ul:not(.browser-default) {
 
 /*---------------------------------------------------Categories-------*/
 
-.delete-btn {
+.cat-btn {
     margin-top: 5px;
 }
+

@@ -3,7 +3,7 @@
 
     <h3 class="center-align">All Essential Oils</h3>
     
-    <div class="row card-panel">
+    <div class="row card-panel search-panel">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s12 search-field">
@@ -28,7 +28,7 @@
         {% for oil in essentialoils %}
         <li>
             <div class="row collapsible-header text-shadow2">                                                                           <!--text shadow if font is changed!!-->
-                <div class="col s9">
+                <div class="col s8 m9">
                     <i class="fas fa-caret-down"></i>
                     <strong>{{ oil.oil_name }}</strong>
                     {% if oil.source_inc == "on" %}
@@ -36,10 +36,11 @@
                         data-tooltip="Source Included!"></i> 
                     {% endif %}
                 </div>
-                <div class="col s3 right">                    
+                <div class="col s4 m3">                    
                     <a href="{{ url_for('delete_oil', oil_id=oil._id)}}"
-                        class="waves-effect waves-light btn-small">Delete</a>
-                    <a href="{{ url_for('edit_oil', oil_id=oil._id)}}" class="waves-effect waves-light btn-small">Edit</a>
+                        class="waves-effect waves-light btn-small right">Delete</a>
+                    <a href="{{ url_for('edit_oil', oil_id=oil._id)}}" 
+                        class="waves-effect waves-light btn-small right">Edit</a>
                 </div>
             </div>
 
