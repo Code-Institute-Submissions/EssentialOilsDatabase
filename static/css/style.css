@@ -19,6 +19,19 @@ h1, h2, h3, h4 {
 .nav-extended {
     background-color: #26a69a;
 }
+
+.sidenav {
+    background-color: #b3efa3;
+}
+
+.sidenav-h {
+    color: #332a52;
+}
+
+.sidenav li>a {
+    color: #9581e8;
+}
+
 /*
 ul:not(.browser-default) {
     background-color: #ccaddc;
@@ -41,6 +54,10 @@ ul:not(.browser-default) {
     background-color: #b3efa3;
     color: #332a52;
     border: 1px solid #332a52;
+}
+
+.switch label {
+    color: #737373;
 }
 
 /*----------------------------------------------------Multiple pages----------------*/
