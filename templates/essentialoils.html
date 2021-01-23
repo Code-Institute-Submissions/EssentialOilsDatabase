@@ -31,6 +31,11 @@
                 <div class="col s8 m9">
                     <i class="fas fa-caret-down"></i>
                     <strong>{{ oil.oil_name }}</strong>
+                    {% if oil.type == "Single Oil" %}
+                    <p>Single Oil</p> 
+                    {% else %}
+                    <p>Combination</p> 
+                    {% endif %}
                     {% if oil.source_inc == "on" %}
                     <i class="fas fa-check tooltipped" data-position="right"
                         data-tooltip="Source Included!"></i> 

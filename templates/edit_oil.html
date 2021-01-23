@@ -8,51 +8,70 @@
             <!--Category Selection------------------------------------------------------------->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-folder-open prefix"></i> 
+                    <i class="fas fa-folder-open prefix"></i>
                     <select id="category_name" name="category_name" class="validate hide" required>
                         <option value="" disabled>Choose Category</option>
                         {% for category in categories %}
-                            {% if category.category_name == oil.category_name %}
-                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                            {% else %}
-                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                            {% endif %}
+                        {% if category.category_name == oil.category_name %}
+                        <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                        {% else %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endif %}
                         {% endfor %}
                     </select>
                     <label for="category_name">Oil Category</label>
                 </div>
-
+            </div>
+            <!--Type Solo or combo----------------------------------------------------------------->
+            <div class="row">
+                <div class="input-field col 12">
+                    <p class="switch">
+                        <label>
+                            <input class="with-gap" name="type" type="radio" checked />
+                            <span>Single Oil</span>
+                        </label>
+                    </p>
+                    <p class="switch">
+                        <label>
+                            <input class="with-gap" name="type" type="radio" />
+                            <span>Combination</span>
+                        </label>
+                    </p>
+                </div>
             </div>
             <!--Oil Name------------------------------------------------------------------------>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix "></i>            <!--change color, fa, and styles-->
-                    <input id="oil_name" name="oil_name" minlength="5" max length="50" 
-                        value="{{ oil.oil_name }}" type="text" class="validate" required>
+                    <i class="fas fa-pencil-alt prefix "></i>
+                    <!--change color, fa, and styles-->
+                    <input id="oil_name" name="oil_name" minlength="5" max length="50" value="{{ oil.oil_name }}"
+                        type="text" class="validate" required>
                     <label for="oil_name">Oil Name</label>
                 </div>
             </div>
             <!--Oil Description------------------------------------------------------------------>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix"></i>                    <!--change color, fa, and styles-->
-                    <textarea id="oil_description" name="oil_description" minlength="5"
-                        maximumlength="200" class="materialize-textarea validate" required>
-                        {{- oil.oil_description -}}                                          
-                    </textarea>
+                    <i class="fas fa-align-left prefix"></i>
+                    <!--change color, fa, and styles-->
+                    <textarea id="oil_description" name="oil_description" minlength="5" maximumlength="200"
+                        class="materialize-textarea validate" required>
+                            {{- oil.oil_description -}}                                          
+                        </textarea>
                     <label for="oil_description">Oil Description</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col 12">
-            <!-- Source included toggle switch ---------------------------------------------------->
+                    <!-- Source included toggle switch ---------------------------------------------------->
                     <div class="switch">
                         <i class="fas fa-check purple text-lighten-2"></i>
                         <label for="source_inc">
                             {% if oil.source_inc == "on" %}
-                                <input type="checkbox" id="source_inc" name="source_inc" checked>
+                            <input type="checkbox" id="source_inc" name="source_inc" checked>
                             {% else %}
-                                <input type="checkbox" id="source_inc" name="source_inc"> <!--only one will be used, can ignore the unique id error-->
+                            <input type="checkbox" id="source_inc" name="source_inc">
+                            <!--only one will be used, can ignore the unique id error-->
                             {% endif %}
                             <span class="lever"></span>
                             Source Included

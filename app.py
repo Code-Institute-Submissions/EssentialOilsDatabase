@@ -42,6 +42,7 @@ def add_oil():
         source_inc = "on" if request.form.get("source_inc") else "off"
         oil = {
             "category_name": request.form.get("category_name"),
+            "type": request.form.get("type"),
             "oil_name": request.form.get("oil_name"),
             "oil_description": request.form.get("oil_description"),
             "source_inc": source_inc,
@@ -60,6 +61,7 @@ def edit_oil(oil_id):
         source_inc = "on" if request.form.get("source_inc") else "off"
         submit = {
             "category_name": request.form.get("category_name"),
+            "type": request.form.get("type"),
             "oil_name": request.form.get("oil_name"),
             "oil_description": request.form.get("oil_description"),
             "source_inc": source_inc,
