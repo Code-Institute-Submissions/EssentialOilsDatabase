@@ -44,7 +44,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix "></i>
                     <!--change color, fa, and styles-->
-                    <input id="oil_name" name="oil_name" minlength="5" max length="50" value="{{ oil.oil_name }}"
+                    <input id="oil_name" name="oil_name" minlength="5" maxlength="50" value="{{ oil.oil_name }}"
                         type="text" class="validate" required>
                     <label for="oil_name">Oil Name</label>
                 </div>
@@ -54,7 +54,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix"></i>
                     <!--change color, fa, and styles-->
-                    <textarea id="oil_description" name="oil_description" minlength="5" maximumlength="200"
+                    <textarea id="oil_description" name="oil_description" minlength="5" maxlength="200"
                         class="materialize-textarea validate" required>
                             {{- oil.oil_description -}}                                          
                         </textarea>
