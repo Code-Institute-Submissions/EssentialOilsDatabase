@@ -99,7 +99,7 @@ h1, h2, h3, h4 {
 
 /*---------------------------------------------------Error Pages------*/
 
-.error-home {
+a.error-home {
     color: #c57919;
     margin-right: 24px;
     -webkit-transition: color .3s ease;
@@ -112,7 +112,7 @@ h1, h2, h3, h4 {
  background-color: #7eaf71;
 }
 
-.error-home :hover {
+a.error-home :hover {
     color: #665b98;
 }
 
