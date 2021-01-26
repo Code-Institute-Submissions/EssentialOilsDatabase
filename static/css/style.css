@@ -111,7 +111,7 @@ a.error-home {
  background-color: #7eaf71;
 }
 
-a.error-home :hover {
+a.error-home:hover {
     color: #665b98;
 }
 
