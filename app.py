@@ -71,7 +71,6 @@ def edit_oil(oil_id):
 
     oil = mongo.db.essential_oils.find_one({"_id": ObjectId(oil_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    print(oil)
     return render_template("edit_oil.html", oil=oil, categories=categories)
 
 

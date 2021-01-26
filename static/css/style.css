@@ -97,3 +97,29 @@ h1, h2, h3, h4 {
     margin-top: 5px;
 }
 
+/*---------------------------------------------------Error Pages------*/
+
+.error-home {
+    color: #c57919;
+    margin-right: 24px;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+    text-transform: uppercase; 
+    font-size: large;
+}
+
+.divider {
+ background-color: #7eaf71;
+}
+
+.error-home :hover {
+    color: #665b98;
+}
+
+.error-text {
+    color: #5b499a;
+}
+
+.error-card {
+    padding-bottom: 15px;
+}
