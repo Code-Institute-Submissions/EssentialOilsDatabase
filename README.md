@@ -87,22 +87,26 @@ The target audience for The Essential Oil Database are users of essential oils, 
 ---
 #### Fonts
 
-For my fonts I kept the standard materialize fonts and the default sizes for HTML as I found they work well for the site.
- 
+For my fonts, I kept the standard materialize fonts and the default sizes for HTML as I found they work well for the site.
+
+In future I would like to include fonts, or the option to switch to fonts, with a mind to accessibility. Fonts designed with users that may have difficulty reading for various reasons that do better with specific fonts.
+
 #### Icons
 
-The icons used were the Font Awesome icons suggested by the Code Institute's tutorial for a database site, I found they fit with the Essential Oil database as well so I kept with that. Except for the checkmark for the source included, as I feel the checkmark fits that better. 
+The icons used were the Font Awesome icons suggested by the Code Institute's tutorial for a database site, I found they fit with the Essential Oil database as well so I kept with that. Except for the checkmark for the source included, as I feel the checkmark fits that better than the icons referenced in the tutorial. 
 
-"Source included?" 
+        "Source included?" 
 
-"Check!"
+        "Check!"
 
  
 #### Styling
 
-For the colours used I started with an idea of wanting an off white colour for the main text and a dark background colour. The panels with the lighter backgrounds and the darker text use the same colour as the background. The darker background area and lighter text use the off white colour, including for the Font Awesome icons. The buttons and the navbar also match in colour. I used the [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) to find most of the colours and how they combined. I also used Bootstrap, Materialize and Font Awesome for styling.
+For the colours used I started with an idea of wanting an off white colour for the main text and a dark background colour. The panels with the lighter backgrounds and the darker text use the same colour as the background. The darker background area and lighter text use the off white colour, including for the Font Awesome icons. The buttons and the navbar also match in colour. I used the [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) to find most of the colours and how they combined. I also used Materialize and Font Awesome for styling. 
 
-The containers, nav, and menu were all similar to the tutorial used to put the project together, mostly because it works very well. 
+In future I would like this site to have options in colour schemes, and fonts, to increase accessibility.
+
+The containers, nav, and menu were all similar to the tutorial used to put the project together, mostly because it works very well for this project as well. 
 
 ---
 ---
@@ -113,8 +117,8 @@ The containers, nav, and menu were all similar to the tutorial used to put the p
  
 The wireframes were created using [Balsamiq](https://balsamiq.com/) while planning this project. While the project has changed slightly since the wireframes were made the core styling remained. 
 
-[Minimal Viable Product Wireframe](https://github.com/Gwen-of-lynn/EssentialOilsDatabase/blob/master/reference/Essential%20Oil%20MVP.pdf)
-[Future Site Wirefram](https://github.com/Gwen-of-lynn/EssentialOilsDatabase/blob/master/reference/Essential%20Oil%20WF.pdf)
+[Minimal Viable Product Wireframe](https://github.com/Gwen-of-lynn/EssentialOilsDatabase/blob/master/documentation/Essential%20Oil%20MVP.pdf)
+[Future Site Wirefram](https://github.com/Gwen-of-lynn/EssentialOilsDatabase/blob/master/documentation/Essential%20Oil%20WF.pdf)
  
 ---
 ---
@@ -145,13 +149,17 @@ This site allows for users to create, retrieve, update and delete data from the 
 ---
 In future I would like this site to have:
 
+- styling options with accessibility in mind.
+
+- other accessibility options, such as text to voice.
+
+- search function to work for categories and not just essential oil name and description.
+
 - sign in, so that not signed in users can search while signed in users would be able to create, edit, and delete depending on their level of authorization. Images for categories, background, and side nav. Potentially able to be chosen by users when they add oils and categories.
     
 - oils marked as new, or verified, by an admin. 
     
 - a random oil picker and potentially a match game for oils and their main property.
-    
-- accessibility options, such as text to voice.
     
 - flash messages shown as pop up modles
     
@@ -187,7 +195,6 @@ In future I would like this site to have:
 #### Libraries
 
 [JQuery] (https://jquery.com/) to simplify DOM manipulation
-[Bootstrap] (https://www.bootstrapcdn.com/) to simplify the structure of the website and make the website responsive easily
 [Materialize] (https://materializecss.com/) to simplify the structure of the website and make the website responsive easily
 [FontAwesome] (https://www.bootstrapcdn.com/fontawesome/) to provide icons for The Essential Oil Database
 [PyMongo] (https://api.mongodb.com/python/current/) to make communication between Python and MongoDB possible
@@ -205,45 +212,31 @@ This project uses HTML, CSS, JavaScript and Python programming languages.
 ---
 ---
 
-Testing information can be found in separate testing.md file	(make testing.md file)
+Testing information can be found in separate [testing.md](https://github.com/Gwen-of-lynn/EssentialOilsDatabase/blob/master/documentation/testing.md) file.
 
 ---
 ---
 ## Deployment
 ---
 ---
-Text about how to deploy
-https://github.com/ajgreaves/picflip#user-stories
----
-### How to run this project locally
-See Anna’s read me to see how to explain
+I deployed this page from Github to Heroku. Heroku has already made a video on how to do this, which I have linked below.
+
+[Heroku Deployment Methods] (https://www.youtube.com/watch?v=fW3yWiRd4E4)
 
 ---
 ---
-## Credits
+## Credits and Acknolodgements
 ---
 ---
-text
-Code used from:
-CI mini-project tutorial, by name ? or just below?
 
-Materialize             --> is this needed? for buttons, panels, navbar and side nav. Code was customized for styling and to fit the project. 
+For this project I followed a tutorial from Code Institute for a Task Manager Database and adapted for my own database, styling and project needs. 
 
-https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/     --> for error pages
+For the error pages I used and adaped code from [this custom error pages site] (https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/)
 
-### Code
--bulletpoints
-
----
----s
-
-## Acknowledgements
-
-Code used from:
-CI mini-project tutorial, by name
+The structure of this readme is based on [A Greave’s Picflip and Familyhub readme files] (https://github.com/AJGreaves).
  
-Special thanks to:
--Bulletpoints
+##### Special thanks to:
+Aaron Sinnott, my mentor for this milestone project.
 
 -Structure of this readme is based on Anna Greave’s picflip and familyhub readme file.
 
