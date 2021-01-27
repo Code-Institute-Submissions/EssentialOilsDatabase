@@ -96,7 +96,6 @@ There are warnings and 'errors' listed in the gitpod console. These are not actu
 ### Areas for Improvement from manual testing
 ---
 - The cards in Categories would look better switched to 2-3 columns at an earlier screensize before it goes to 1 column
-- Slightly increased space would look better in Edit Category in mobile size
-- Reverse order of Delete and Edit on main page for intuitive use, especially for smaller screens and mobile screen
+- Slightly increased space between the buttons would look better in Edit Category in mobile size
 ---
 ---
